@@ -37,6 +37,10 @@ def implementation_status() -> dict[str, object]:
     }
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Run the MCP server using the SDK's default stdio transport."""
     mcp.run()
 
+
+if __name__ == "__main__":
+    main()

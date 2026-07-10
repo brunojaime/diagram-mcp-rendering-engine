@@ -21,3 +21,21 @@ uv sync --extra dev
 uv run pytest
 ```
 
+## Running The MCP Server
+
+From a checkout:
+
+```bash
+uv run diagram-mcp-rendering-engine
+```
+
+After installing the package into an environment:
+
+```bash
+diagram-mcp-rendering-engine
+```
+
+The current command runs the scaffold server over the MCP SDK default stdio
+transport. The HTTPS localhost transport, tool surface, renderer, and export
+behavior are specified in `specs/016-diagram-mcp-rendering-engine/` and should
+be implemented through the planned SDD tasks.

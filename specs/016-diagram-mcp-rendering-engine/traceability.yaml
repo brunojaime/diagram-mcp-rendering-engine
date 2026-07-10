@@ -56,29 +56,41 @@ requirements:
 
 acceptance_criteria:
   AC-001:
-    tests: []
+    tests:
+      - tests/diagram_spec/test_validate_diagram_spec.py::test_valid_component_diagram_passes
   AC-002:
-    tests: []
+    tests:
+      - tests/diagram_spec/test_validate_diagram_spec.py::test_connection_to_missing_component_fails
   AC-003:
-    tests: []
+    tests:
+      - tests/rendering/test_svg_renderer.py::test_render_diagram_svg_is_deterministic
   AC-004:
-    tests: []
+    tests:
+      - tests/rendering/test_provided_required_interface.py::test_socket_is_on_consumer_side_and_lollipop_on_provider_side
   AC-005:
-    tests: []
+    tests:
+      - tests/layout/test_anchors_and_ports.py::test_all_connector_endpoints_resolve_to_declared_anchors
   AC-006:
-    tests: []
+    tests:
+      - tests/layout/test_lr_layout.py::test_browser_gateway_database_and_api_server_layout_left_to_right
   AC-007:
-    tests: []
+    tests:
+      - tests/layout/test_anchors_and_ports.py::test_multiple_outputs_use_distinct_dynamic_ports
   AC-008:
-    tests: []
+    tests:
+      - tests/mcp_tools/test_move_node.py::test_move_node_persists_position_and_pins_node
   AC-009:
-    tests: []
+    tests:
+      - tests/mcp_tools/test_move_node.py::test_move_node_reroutes_connections_without_changing_semantics
   AC-010:
-    tests: []
+    tests:
+      - tests/mcp_server/test_https_loopback.py::test_server_requires_https_loopback_configuration
   AC-011:
-    tests: []
+    tests:
+      - tests/export/test_export_diagram.py::test_export_diagram_returns_self_contained_svg
   AC-012:
-    tests: []
+    tests:
+      - tests/rendering/test_svg_renderer.py::test_svg_can_be_consumed_without_frontend_uml_logic
 
 diagrams:
   architecture:
