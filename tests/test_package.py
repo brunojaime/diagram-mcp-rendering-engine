@@ -10,8 +10,9 @@ def test_version_is_defined() -> None:
 
 def test_implementation_status_points_to_spec() -> None:
     status = implementation_status()
-    assert status["status"] == "spec_scaffold"
+    assert status["status"] == "implemented_mvp"
     assert status["spec_id"] == "016-diagram-mcp-rendering-engine"
+    assert "render_diagram_svg" in status["implemented_tools"]
 
 
 def test_console_script_targets_server_main() -> None:
