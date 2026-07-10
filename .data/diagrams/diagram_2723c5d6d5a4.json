@@ -1,0 +1,78 @@
+{
+  "createdAt": "2026-07-10T19:42:13.388772+00:00",
+  "diagramId": "diagram_2723c5d6d5a4",
+  "history": [
+    {
+      "operation": "create_component_diagram",
+      "timestamp": "2026-07-10T19:42:13.388789+00:00"
+    },
+    {
+      "operation": "update_node",
+      "timestamp": "2026-07-10T19:48:27.361533+00:00"
+    }
+  ],
+  "schemaVersion": "1.0",
+  "spec": {
+    "components": [
+      {
+        "id": "browser",
+        "label": "Browser",
+        "pinned": false,
+        "template": "uml_component"
+      },
+      {
+        "attributes": [
+          "AWS lambda"
+        ],
+        "id": "backend",
+        "label": "Backend",
+        "pinned": false,
+        "template": "uml_component"
+      },
+      {
+        "id": "api",
+        "label": "API",
+        "pinned": false,
+        "template": "uml_component"
+      }
+    ],
+    "connections": [
+      {
+        "from": "browser",
+        "id": "browser_to_backend_https",
+        "interface": "HTTPS",
+        "label": "HTTPS",
+        "metadata": {
+          "interface": "HTTPS",
+          "protocol": "HTTPS"
+        },
+        "to": "backend"
+      },
+      {
+        "from": "backend",
+        "id": "backend_to_api_http",
+        "interface": "API",
+        "label": "HTTP",
+        "metadata": {
+          "interface": "API",
+          "protocol": "HTTP"
+        },
+        "to": "api"
+      }
+    ],
+    "diagram_type": "uml_component",
+    "id": "diagram_2723c5d6d5a4",
+    "layout": {
+      "column_gap": 320,
+      "direction": "LR",
+      "grid": 20,
+      "mode": "auto",
+      "row_gap": 120
+    },
+    "title": "Browser Backend API Communication",
+    "version": "1.0"
+  },
+  "svgCache": "<svg xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" viewBox=\"39 39 822 92\" width=\"822\" height=\"92\" data-renderer=\"diagram-mcp-rendering-engine\">\n<style>.component{fill:#fff;stroke:#000;stroke-width:1}.component-separator{stroke:#000;stroke-width:1}.component-icon{fill:#fff;stroke:#000;stroke-width:1}.component-icon-detail{fill:none;stroke:#000;stroke-width:1}.connector{fill:none;stroke:#000;stroke-width:1}.socket{fill:none;stroke:#000;stroke-width:2}.lollipop{fill:#fff;stroke:#000;stroke-width:2}.label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}.body-label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}.small-label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}</style>\n<g id=\"diagram-connectors\" data-layer=\"connectors\">\n<path id=\"connector-backend_to_api_http_required\" class=\"connector\" data-connection-id=\"backend_to_api_http\" data-from-node=\"backend\" data-to-node=\"interface_backend_to_api_http\" data-role=\"consumer_to_required\" d=\"M 540 85 L 600 85\"/>\n<path id=\"connector-backend_to_api_http_provided\" class=\"connector\" data-connection-id=\"backend_to_api_http\" data-from-node=\"interface_backend_to_api_http\" data-to-node=\"api\" data-role=\"provided_to_provider\" d=\"M 620 85 L 680 85\"/>\n<path id=\"connector-browser_to_backend_https_required\" class=\"connector\" data-connection-id=\"browser_to_backend_https\" data-from-node=\"browser\" data-to-node=\"interface_browser_to_backend_https\" data-role=\"consumer_to_required\" d=\"M 220 85 L 280 85\"/>\n<path id=\"connector-browser_to_backend_https_provided\" class=\"connector\" data-connection-id=\"browser_to_backend_https\" data-from-node=\"interface_browser_to_backend_https\" data-to-node=\"backend\" data-role=\"provided_to_provider\" d=\"M 300 85 L 360 85\"/>\n</g>\n<g id=\"diagram-nodes\" data-layer=\"nodes\">\n<g id=\"node-browser\" data-node-id=\"browser\" data-node-type=\"uml_component\" transform=\"translate(40 40)\">\n<rect class=\"component\" width=\"180\" height=\"90\"/>\n<line class=\"component-separator\" x1=\"0\" y1=\"34\" x2=\"180\" y2=\"34\"/>\n<path class=\"component-icon\" d=\"M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z\"/>\n<path class=\"component-icon-detail\" d=\"M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20\"/>\n<text class=\"label\" text-anchor=\"middle\" font-weight=\"700\" x=\"90\" y=\"22\">Browser</text>\n</g>\n<g id=\"node-backend\" data-node-id=\"backend\" data-node-type=\"uml_component\" transform=\"translate(360 40)\">\n<rect class=\"component\" width=\"180\" height=\"90\"/>\n<line class=\"component-separator\" x1=\"0\" y1=\"34\" x2=\"180\" y2=\"34\"/>\n<path class=\"component-icon\" d=\"M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z\"/>\n<path class=\"component-icon-detail\" d=\"M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20\"/>\n<text class=\"label\" text-anchor=\"middle\" font-weight=\"700\" x=\"90\" y=\"22\">Backend</text>\n<text class=\"body-label\" x=\"12\" y=\"52\">AWS lambda</text>\n</g>\n<g id=\"node-api\" data-node-id=\"api\" data-node-type=\"uml_component\" transform=\"translate(680 40)\">\n<rect class=\"component\" width=\"180\" height=\"90\"/>\n<line class=\"component-separator\" x1=\"0\" y1=\"34\" x2=\"180\" y2=\"34\"/>\n<path class=\"component-icon\" d=\"M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z\"/>\n<path class=\"component-icon-detail\" d=\"M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20\"/>\n<text class=\"label\" text-anchor=\"middle\" font-weight=\"700\" x=\"90\" y=\"22\">API</text>\n</g>\n<g id=\"node-interface_backend_to_api_http\" data-node-id=\"interface_backend_to_api_http\" data-node-type=\"provided_required_interface\" data-connection-id=\"backend_to_api_http\" transform=\"translate(600 75)\">\n<text class=\"small-label\" text-anchor=\"middle\" x=\"10\" y=\"-12\">HTTP</text>\n<path id=\"interface_backend_to_api_http-socket\" class=\"socket\" data-anchor=\"required\" d=\"M 10 0 A 10 10 0 0 0 10 20\"/>\n<circle id=\"interface_backend_to_api_http-lollipop\" class=\"lollipop\" data-anchor=\"provided\" cx=\"13\" cy=\"10\" r=\"7\"/>\n</g>\n<g id=\"node-interface_browser_to_backend_https\" data-node-id=\"interface_browser_to_backend_https\" data-node-type=\"provided_required_interface\" data-connection-id=\"browser_to_backend_https\" transform=\"translate(280 75)\">\n<text class=\"small-label\" text-anchor=\"middle\" x=\"10\" y=\"-12\">HTTPS</text>\n<path id=\"interface_browser_to_backend_https-socket\" class=\"socket\" data-anchor=\"required\" d=\"M 10 0 A 10 10 0 0 0 10 20\"/>\n<circle id=\"interface_browser_to_backend_https-lollipop\" class=\"lollipop\" data-anchor=\"provided\" cx=\"13\" cy=\"10\" r=\"7\"/>\n</g>\n</g>\n</svg>",
+  "svgCacheAuthoritative": false,
+  "updatedAt": "2026-07-10T19:48:27.365495+00:00"
+}

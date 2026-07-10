@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="39 39 822 92" width="822" height="92" data-renderer="diagram-mcp-rendering-engine">
+<style>.component{fill:#fff;stroke:#000;stroke-width:1}.component-separator{stroke:#000;stroke-width:1}.component-icon{fill:#fff;stroke:#000;stroke-width:1}.component-icon-detail{fill:none;stroke:#000;stroke-width:1}.connector{fill:none;stroke:#000;stroke-width:1}.socket{fill:none;stroke:#000;stroke-width:2}.lollipop{fill:#fff;stroke:#000;stroke-width:2}.label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}.body-label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}.small-label{font-family:Helvetica,Arial,sans-serif;font-size:12px;fill:#000}</style>
+<g id="diagram-connectors" data-layer="connectors">
+<path id="connector-backend_to_api_http_required" class="connector" data-connection-id="backend_to_api_http" data-from-node="backend" data-to-node="interface_backend_to_api_http" data-role="consumer_to_required" d="M 540 85 L 600 85"/>
+<path id="connector-backend_to_api_http_provided" class="connector" data-connection-id="backend_to_api_http" data-from-node="interface_backend_to_api_http" data-to-node="api" data-role="provided_to_provider" d="M 620 85 L 680 85"/>
+<path id="connector-browser_to_backend_https_required" class="connector" data-connection-id="browser_to_backend_https" data-from-node="browser" data-to-node="interface_browser_to_backend_https" data-role="consumer_to_required" d="M 220 85 L 280 85"/>
+<path id="connector-browser_to_backend_https_provided" class="connector" data-connection-id="browser_to_backend_https" data-from-node="interface_browser_to_backend_https" data-to-node="backend" data-role="provided_to_provider" d="M 300 85 L 360 85"/>
+</g>
+<g id="diagram-nodes" data-layer="nodes">
+<g id="node-browser" data-node-id="browser" data-node-type="uml_component" transform="translate(40 40)">
+<rect class="component" width="180" height="90"/>
+<line class="component-separator" x1="0" y1="34" x2="180" y2="34"/>
+<path class="component-icon" d="M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z"/>
+<path class="component-icon-detail" d="M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20"/>
+<text class="label" text-anchor="middle" font-weight="700" x="90" y="22">Browser</text>
+</g>
+<g id="node-backend" data-node-id="backend" data-node-type="uml_component" transform="translate(360 40)">
+<rect class="component" width="180" height="90"/>
+<line class="component-separator" x1="0" y1="34" x2="180" y2="34"/>
+<path class="component-icon" d="M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z"/>
+<path class="component-icon-detail" d="M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20"/>
+<text class="label" text-anchor="middle" font-weight="700" x="90" y="22">Backend</text>
+<text class="body-label" x="12" y="52">AWS lambda</text>
+</g>
+<g id="node-api" data-node-id="api" data-node-type="uml_component" transform="translate(680 40)">
+<rect class="component" width="180" height="90"/>
+<line class="component-separator" x1="0" y1="34" x2="180" y2="34"/>
+<path class="component-icon" d="M 160 4 L 176 4 L 176 24 L 160 24 L 160 20 L 156 20 L 156 16 L 160 16 L 160 12 L 156 12 L 156 8 L 160 8 Z"/>
+<path class="component-icon-detail" d="M 160 8 L 164 8 L 164 12 L 160 12 M 160 16 L 164 16 L 164 20 L 160 20"/>
+<text class="label" text-anchor="middle" font-weight="700" x="90" y="22">API</text>
+</g>
+<g id="node-interface_backend_to_api_http" data-node-id="interface_backend_to_api_http" data-node-type="provided_required_interface" data-connection-id="backend_to_api_http" transform="translate(600 75)">
+<text class="small-label" text-anchor="middle" x="10" y="-12">HTTP</text>
+<path id="interface_backend_to_api_http-socket" class="socket" data-anchor="required" d="M 10 0 A 10 10 0 0 0 10 20"/>
+<circle id="interface_backend_to_api_http-lollipop" class="lollipop" data-anchor="provided" cx="13" cy="10" r="7"/>
+</g>
+<g id="node-interface_browser_to_backend_https" data-node-id="interface_browser_to_backend_https" data-node-type="provided_required_interface" data-connection-id="browser_to_backend_https" transform="translate(280 75)">
+<text class="small-label" text-anchor="middle" x="10" y="-12">HTTPS</text>
+<path id="interface_browser_to_backend_https-socket" class="socket" data-anchor="required" d="M 10 0 A 10 10 0 0 0 10 20"/>
+<circle id="interface_browser_to_backend_https-lollipop" class="lollipop" data-anchor="provided" cx="13" cy="10" r="7"/>
+</g>
+</g>
+</svg>
